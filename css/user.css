@@ -1,0 +1,186 @@
+/* =========================================
+   user.css — User panel styles
+   ========================================= */
+
+/* ── Page Header (shared with admin) ── */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.page-title    { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin: 0; }
+.page-subtitle { color: #64748b; font-size: 0.875rem; margin: 0.25rem 0 0; }
+
+/* ── Request Status Badges ── */
+.request-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.status-pending  { background: #fef9c3; color: #a16207; }
+.status-approved { background: #dcfce7; color: #15803d; }
+.status-rejected { background: #fee2e2; color: #b91c1c; }
+
+/* ── Empty State ── */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #94a3b8;
+}
+.empty-state i    { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
+.empty-state p    { font-size: 1rem; font-weight: 600; color: #64748b; margin: 0; }
+.empty-state small { font-size: 0.82rem; }
+
+/* ── KPI Preview box (in request form) ── */
+.kpi-preview-box {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border: 1.5px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+}
+.kpi-preview-label { font-size: 0.75rem; font-weight: 600; color: #3b82f6; text-transform: uppercase; }
+.kpi-preview-value { font-size: 1.4rem; font-weight: 700; color: #1e40af; }
+
+/* ── Request info box ── */
+.request-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: #0369a1;
+}
+
+/* ── Upload Dropzone ── */
+.upload-dropzone {
+    border: 2.5px dashed #86efac;
+    border-radius: 14px;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #f0fdf4;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+.upload-dropzone.drag-over {
+    background: #dcfce7;
+    border-color: #16a34a;
+}
+.upload-icon     { font-size: 2.5rem; color: #22c55e; display: block; margin-bottom: 0.5rem; }
+.upload-text     { font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem; }
+.upload-filename { font-size: 0.85rem; color: #16a34a; font-weight: 600; }
+
+/* ── Template hint ── */
+.template-hint {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* ── Summary bar (dashboard) ── */
+.summary-bar {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.06);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.summary-bar__item {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 120px;
+}
+.summary-bar__divider {
+    width: 1px;
+    background: #e2e8f0;
+    margin: 0.75rem 0;
+}
+.summary-bar__label { font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.summary-bar__val   { font-size: 1.1rem; font-weight: 700; color: #1e293b; }
+
+/* ── My KPI Cards (my_data.php) ── */
+.my-kpi-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    border-top: 4px solid #e2e8f0;
+}
+.my-kpi-card:hover { transform: translateY(-3px); }
+.my-kpi-card--pass { border-top-color: #16a34a; }
+.my-kpi-card--fail { border-top-color: #dc2626; }
+
+.my-kpi-card__header {
+    padding: 1.25rem 1.25rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+.my-kpi-card__name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.my-kpi-card__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0.75rem 1.25rem;
+}
+.my-kpi-stat          { padding: 0.5rem 0; }
+.my-kpi-stat__label   { font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.my-kpi-stat__val     { font-size: 1rem; font-weight: 700; margin-top: 2px; }
+
+.my-kpi-card__progress {
+    padding: 0.5rem 1.25rem;
+}
+
+.my-kpi-card__footer {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* ── User Avatar (shared, also in admin.css) ── */
+.user-avatar-sm {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* ── Navbar active fix for user pages ── */
+.navbar .nav-link.active { font-weight: 600; }
