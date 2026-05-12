@@ -1,0 +1,138 @@
+/* =========================================
+   admin.css — Admin panel specific styles
+   ========================================= */
+
+/* ── Page Header ── */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.page-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+.page-subtitle {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0;
+}
+
+/* ── Admin Action Cards ── */
+.admin-action-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.06);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.admin-action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    color: inherit;
+}
+.admin-action-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+.admin-action-title { font-weight: 700; font-size: 0.95rem; color: #1e293b; }
+.admin-action-desc  { font-size: 0.8rem; color: #64748b; margin-top: 2px; }
+.admin-action-arrow { margin-left: auto; color: #94a3b8; font-size: 1rem; flex-shrink: 0; }
+
+/* ── User Avatar ── */
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0d9488, #2563eb);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.user-avatar-sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* ── Highlight Config Card ── */
+.highlight-config-card {
+    background: #f8fafc;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+.highlight-config-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* ── Extra Color Variants for Highlight Cards ── */
+.highlight-card--purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+.highlight-card--red    { background: linear-gradient(135deg, #dc2626, #f97316); }
+.highlight-card--green  { background: linear-gradient(135deg, #16a34a, #059669); }
+
+/* ── Modal ── */
+.modal-content {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* ── Nav pills (admin tabs) ── */
+.nav-pills .nav-link {
+    font-size: 0.875rem;
+    border-radius: 8px;
+    color: #475569;
+    font-family: 'Sarabun', sans-serif;
+}
+.nav-pills .nav-link.active {
+    background: #0d9488;
+    color: white;
+}
+
+/* ── Forms in modal ── */
+.modal .form-control,
+.modal .form-select {
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 8px;
+    border: 1.5px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+.modal .form-control:focus,
+.modal .form-select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.15);
+}
